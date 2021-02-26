@@ -18,12 +18,4 @@ ENV JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
 
 ENV JDK_HOME=/usr/lib/jvm/java-8-openjdk-amd64
 
-ENV PATH=$JAVA_HOME/bin:$PATH
-
-ENV PATH=$PATH:$ANDROID_HOME/emulator
-
-ENV PATH=$PATH:$ANDROID_HOME/tools
-
-ENV PATH=$PATH:$ANDROID_HOME/tools/bin
-
-ENV PATH=$PATH:$ANDROID_HOME/platform-tools
+ENV PATH=$JAVA_HOME/bin:$ANDROID_HOME/emulator:$ANDROID_HOME/tools:$ANDROID_HOME/tools/bin:$ANDROID_HOME/platform-tools:$PATH
