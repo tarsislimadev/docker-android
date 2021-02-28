@@ -11,7 +11,6 @@ for tag in $TAGS; do
 echo
 echo
 echo --- TAG $tag ---
-[[ $tag = "latest" ]] && tag=$(cat latest) && echo latest is $tag
 echo
 
 cd $tag
