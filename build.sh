@@ -1,8 +1,9 @@
+#!/bin/bash
 
 if [[ -z "$@" ]]; then
-TAGS="30 ionic"
+TAGS=$(ls -d */ | sed "s/\///g")
 else
-TAGS="$@"
+TAGS="$@ latest"
 fi
 
 for tag in $TAGS; do
@@ -10,6 +11,7 @@ for tag in $TAGS; do
 echo
 echo
 echo --- TAG $tag ---
+[[ $tag = "latest" ]] && tag=$(cat latest) && echo latest is $tag
 echo
 
 cd $tag
