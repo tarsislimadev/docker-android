@@ -1,9 +1,10 @@
 #!/bin/bash
 
 if [[ -z "$@" ]]; then
-TAGS=$(ls -d */ | sed "s/\///g")
+DIRS=$(ls -d */ | sed "s/\///g")
+TAGS="$DIRS latest"
 else
-TAGS="$@ latest"
+TAGS="$@"
 fi
 
 for tag in $TAGS; do
