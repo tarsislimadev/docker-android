@@ -1,6 +1,6 @@
 FROM androidsdk/android-30 as android
 
-FROM node:15.9
+FROM node:15.11
 
 COPY --from=android /usr/lib/jvm/java-8-openjdk-amd64 /usr/lib/jvm/java-8-openjdk-amd64
 
