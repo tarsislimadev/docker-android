@@ -25,3 +25,20 @@ docker run --rm -it -p 8000:8100 -v $(pwd):/app -w /app tmvdl/android:ionic bash
 ```bash
 docker run --rm -it -p 8000:19000 -v $(pwd):/app -w /app tmvdl/android:react-native bash
 ```
+
+## Publicador
+
+Baixe esse repositório
+```bash
+git clone https://github.com/tmvdl/docker-android
+```
+
+Instale as dependencias com [Yarn](https://yarnpkg.com/)
+```bash
+yarn
+```
+
+Execute o "publicador" com [Node.js](https://nodejs.org/pt-br/)
+```bash
+node .
+```
