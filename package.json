@@ -1,0 +1,34 @@
+{
+  "name": "docker-android",
+  "version": "1.0.0",
+  "description": "Imagem Docker para ambientes Android com Node.js",
+  "main": "ask.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tmvdl/docker-android.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tmvdl/docker-android/issues"
+  },
+  "homepage": "https://github.com/tmvdl/docker-android#readme",
+  "extensionPack": [
+    "dbaeumer.vscode-eslint"
+  ],
+  "dependencies": {
+    "debug": "^4.3.1",
+    "enquirer": "^2.3.6"
+  },
+  "devDependencies": {
+    "eslint": "^7.21.0",
+    "eslint-config-standard": "^16.0.2",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.3.1"
+  }
+}
