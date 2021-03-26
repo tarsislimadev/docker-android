@@ -2,9 +2,11 @@ const { Select, MultiSelect, Input } = require('enquirer')
 const debug = require('debug')('DEBUG:ask')
 const path = require('path')
 const fs = require('fs')
+const { spawnSync } = require('child_process')
 
 // CONSTANTS
 
+const IMAGE_NAME = 'tmvdl/android'
 const PATH_TAGS = path.resolve('.', 'tags')
 const TAGS = fs.readdirSync(PATH_TAGS)
 if (TAGS?.length === 0) throw new Error('Tags not found')
@@ -76,7 +78,18 @@ const askMirror = async (publishTags = []) => {
 
 const runBuild = async (tagsToBuild) => {
   debug('tags to build', tagsToBuild)
-  // TODO
+
+  const tags = tagsToBuild.map(tagName => ({
+    tagName: IMAGE_NAME + ':' + tagName,
+    path: path.resolve('.', 'tags', tagName)
+  }))
+
+  const commands = tags.map(({ tagName, path: dir }) => ({
+    base: 'docker',
+    args: ['build', '-t', tagName, dir]
+  }))
+
+  commands.forEach(({ base, args }) => spawnSync(base, args, { stdio: 'inherit' }))
 }
 
 const runMirror = async (tagsToMirror) => {
