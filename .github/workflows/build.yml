@@ -30,4 +30,4 @@ jobs:
       #     tags: user/app:latest
       -
         name: Image digest
-        run: echo OK
+        run: docker --version && docker-compose --version
