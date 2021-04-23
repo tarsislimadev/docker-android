@@ -1,7 +1,5 @@
 FROM tmvdl/android:30
 
-RUN npm install -g expo-cli
+WORKDIR /app
 
 CMD yarn android
-
-EXPOSE 19000
