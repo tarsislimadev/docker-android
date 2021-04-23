@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+
+  tag-30:
+    build: ./tags/30
+
+  tag-cordova:
+    build: ./tags/cordova
+
+  tag-ionic:
+    build: ./tags/ionic
+
+  tag-react-native:
+    build: ./tags/react-native
