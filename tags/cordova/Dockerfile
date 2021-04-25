@@ -2,6 +2,16 @@ FROM tmvdl/android:30
 
 WORKDIR /env
 
+ENV KEYALIAS=alias
+
+ENV KEYPASS=password
+
+ENV MAKEKEYFILE=1
+
+ENV KEYFILE=/builds/keystore.jks
+
+ENV STOREPASS=password
+
 COPY . .
 
 WORKDIR /app
