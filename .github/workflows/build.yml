@@ -23,16 +23,13 @@ jobs:
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
-      # -
-      #   name: Build and push
-      #   id: docker_build
-      #   uses: docker/build-push-action@v2
-      #   with:
-      #     push: true
-      #     tags: user/app:latest
       -
-        name: Build and tag
-        run: sh build.sh 30 cordova ionic react-native
+        name: Build and Tag
+        run: sh build.sh ${{ secrets.IMAGE_TAGS }}
       -
-        name: Image list
-        run: docker image ls -a
+        name: Push
+        id: docker_build
+        uses: docker/build-push-action@v2
+        with:
+          push: true
+          tags: ${{ secrets.IMAGE_NAME }} -a
