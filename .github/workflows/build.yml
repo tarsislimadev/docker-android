@@ -30,7 +30,7 @@ jobs:
       #     tags: user/app:latest
       -
         name: Build and tag
-        run: sh build.sh 30 cordova ionic react-native
+        run: ls -la # sh build.sh 30 cordova ionic react-native
       -
         name: Image list
         run: docker image ls -a
