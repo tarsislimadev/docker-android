@@ -29,5 +29,8 @@ jobs:
       #     push: true
       #     tags: user/app:latest
       -
-        name: Image digest
-        run: docker --version && docker-compose --version
+        name: Build and tag
+        run: sh build.sh 30 cordova ionic react-native
+      -
+        name: Image list
+        run: docker image ls -a
