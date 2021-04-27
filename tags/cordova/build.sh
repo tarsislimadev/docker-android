@@ -8,4 +8,4 @@ yes | keytool -genkey -v -alias $KEYALIAS -keystore $KEYFILE -storepass $STOREPA
 
 cordova build android --release -- --alias=$KEYALIAS --keystore=$KEYFILE --storePassword=$STOREPASS --password=$KEYPASS
 
-cp /app/platforms/android/app/build/outputs/bundle/release/app-release.aab /builds
+cp /app/platforms/android/app/build/outputs/ /builds -r
