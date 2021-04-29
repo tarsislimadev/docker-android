@@ -4,8 +4,8 @@ npm ci
 
 cordova platform add android
 
-yes | keytool -genkey -v -alias $KEYALIAS -keystore $KEYFILE -storepass $STOREPASS -keypass $KEYPASS -validity 7 -keysize 2048 -keyalg RSA
+yes | keytool -genkey -v -alias $CORDOVA_KEYALIAS -keystore $CORDOVA_KEYFILE -storepass $CORDOVA_STOREPASS -keypass $CORDOVA_KEYPASS -validity $CORDOVA_VALIDITY -keysize 2048 -keyalg RSA
 
-cordova build android --release -- --alias=$KEYALIAS --keystore=$KEYFILE --storePassword=$STOREPASS --password=$KEYPASS
+cordova build android --release -- --alias=$CORDOVA_KEYALIAS --keystore=$CORDOVA_KEYFILE --storePassword=$CORDOVA_STOREPASS --password=$CORDOVA_KEYPASS
 
 cp /app/platforms/android/app/build/outputs/ /builds -r

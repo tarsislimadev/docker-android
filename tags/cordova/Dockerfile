@@ -2,13 +2,15 @@ FROM tmvdl/android:30
 
 WORKDIR /env
 
-ENV KEYALIAS=alias
+ENV CORDOVA_VALIDITY=7
 
-ENV KEYPASS=password
+ENV CORDOVA_KEYALIAS=alias
 
-ENV KEYFILE=/builds/keystore.jks
+ENV CORDOVA_KEYPASS=password
 
-ENV STOREPASS=password
+ENV CORDOVA_KEYFILE=/builds/keystore.jks
+
+ENV CORDOVA_STOREPASS=password
 
 COPY . .
 
