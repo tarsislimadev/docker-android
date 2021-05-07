@@ -2,7 +2,7 @@
 
 npm ci
 
-ng build --prod --project=$NG_APP --release --wwwDir www
+ng build --prod
 
 if ! -d "platforms" ; then
   cordova platform add android
