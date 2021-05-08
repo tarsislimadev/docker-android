@@ -25,7 +25,7 @@ jobs:
           password: ${{ secrets.DOCKERHUB_TOKEN }}
       -
         name: Build and Tag
-        run: sh build.sh ${{ secrets.IMAGE_TAGS }}
+        run: sh build.sh 30 angular cordova ionic react-native
       -
         name: Push
         run: docker push ${{ secrets.IMAGE_NAME }} -a
