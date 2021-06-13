@@ -1,5 +1,7 @@
 #!/bin/sh
 
+[[ -f before_build.sh ]] && sh before_build.sh
+
 npm ci
 
 ng build --prod
@@ -25,3 +27,5 @@ APK=$(echo $AAB | sed -s s/.aab/.apks/)
 java -jar /env/bundletool-all-1.6.0.jar build-apks --bundle=$AAB --output=$APK --ks=$CORDOVA_KEYFILE --ks-pass=pass:$CORDOVA_KEYPASS --ks-key-alias=$CORDOVA_KEYALIAS
 
 done
+
+[[ -f after_build.sh ]] && sh after_build.sh
