@@ -1,6 +1,8 @@
 #!/bin/sh
 
-[[ -f before_build.sh ]] && sh before_build.sh
+if test -f "./before_build.sh"; then
+  sh ./before_build.sh
+fi
 
 npm ci
 
@@ -26,4 +28,6 @@ java -jar /env/bundletool-all-1.6.0.jar build-apks --bundle=$AAB --output=$APK -
 
 done
 
-[[ -f after_build.sh ]] && sh after_build.sh
+if test -f "./after_build.sh"; then
+  sh ./after_build.sh
+fi

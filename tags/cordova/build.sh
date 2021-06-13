@@ -1,6 +1,8 @@
 #!/bin/sh
 
-[[ -f before_build.sh ]] && sh before_build.sh
+if test -f "./before_build.sh"; then
+  sh ./before_build.sh
+fi
 
 npm ci
 
@@ -12,4 +14,6 @@ cordova build android --release -- --alias=$CORDOVA_KEYALIAS --keystore=$CORDOVA
 
 cp /app/platforms/android/app/build/outputs/ /builds -r
 
-[[ -f after_build.sh ]] && sh after_build.sh
+if test -f "./after_build.sh"; then
+  sh ./after_build.sh
+fi
