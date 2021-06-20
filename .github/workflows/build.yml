@@ -22,7 +22,7 @@ jobs:
         uses: docker/login-action@v1 
         with:
           username: tmvdl
-          password: ${{ secrets.GITHUB_DOCKER_ANDROID }}
+          password: ${{ secrets.GITHUBDOCKERANDROID }}
       -
         name: Build and Tag
         run: sh build.sh 30 angular cordova ionic react-native
