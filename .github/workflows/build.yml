@@ -21,11 +21,11 @@ jobs:
         name: Login to DockerHub
         uses: docker/login-action@v1 
         with:
-          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          username: tmvdl
           password: ${{ secrets.DOCKERHUB_TOKEN }}
       -
         name: Build and Tag
         run: sh build.sh 30 angular cordova ionic react-native
       -
         name: Push
-        run: docker push ${{ secrets.IMAGE_NAME }} -a
+        run: docker push tmvdl/android -a
