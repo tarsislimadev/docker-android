@@ -24,6 +24,8 @@ ENV JDK_HOME=/usr/lib/jvm/java-8-openjdk-amd64
 
 ENV PATH=$JAVA_HOME/bin:$ANDROID_HOME/emulator:$ANDROID_HOME/tools:$ANDROID_HOME/tools/bin:$ANDROID_HOME/platform-tools:$PATH
 
+RUN yes | android update sdk 
+
 RUN npm install -g @angular/cli @ionic/cli cordova phonegap expo-cli
 
 RUN cordova telemetry off
