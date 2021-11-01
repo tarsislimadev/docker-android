@@ -1,11 +1,6 @@
 # Android
 FROM tmvdl/android:30
 
-# Gradle
-COPY gradle /gradle
-COPY igradle /usr/bin/igradle
-RUN chmod 777 /usr/bin/igradle
-
 # Cordova
 WORKDIR /env
 ENV CORDOVA_VALIDITY=11000

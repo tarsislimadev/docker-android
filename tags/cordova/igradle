@@ -1,8 +1,0 @@
-#!/bin/bash
-
-VERSION=$1
-
-DATETIME=$( date +%Y%m%d%H%M )
-
-mv /usr/share/gradle/ "/usr/share/gradle.old.$DATETIME"
-cp /gradle/g-$VERSION/ /usr/share/gradle -rf
