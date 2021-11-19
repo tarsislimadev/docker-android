@@ -74,4 +74,4 @@ services:
 
 ## Update
 
-Atualizado em 27/09/2021
+Atualizado em 18/11/2021
