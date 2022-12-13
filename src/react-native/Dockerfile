@@ -2,4 +2,4 @@ FROM tmvdl/android:30
 
 WORKDIR /app
 
-CMD yarn android
+RUN npx react-native run-android --variant=release
