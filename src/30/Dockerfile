@@ -1,16 +1,16 @@
-FROM androidsdk/android-30 as android
+FROM gradle:6-jdk11 as gradle
 
-RUN apt update -y && apt install -y openjdk-11-jdk
+FROM androidsdk/android-30 as android
 
 FROM node:lts
 
 RUN mkdir -p /builds
 
-COPY --from=android /usr/lib/jvm /usr/lib/jvm
+COPY --from=gradle /usr/lib/jvm /usr/lib/jvm
 
 COPY --from=android /opt/android-sdk-linux /opt/android-sdk-linux
 
-RUN apt update && apt install -y gradle maven
+RUN apt update -y && apt install -y gradle=4.10 maven --reinstall
 
 ENV ANDROID_HOME=/opt/android-sdk-linux
 
