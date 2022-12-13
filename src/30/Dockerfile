@@ -28,6 +28,6 @@ ENV PATH=$JAVA_HOME/bin:$ANDROID_HOME/emulator:$ANDROID_HOME/tools:$ANDROID_HOME
 
 RUN yes | android update sdk 
 
-RUN npm install -g @angular/cli @ionic/cli cordova phonegap expo-cli
+# RUN npm install -g @angular/cli @ionic/cli cordova phonegap expo-cli
 
-RUN cordova telemetry off
+# RUN cordova telemetry off
