@@ -12,6 +12,8 @@ ENV CORDOVA_STOREPASS=password
 
 ENV NG_APP=app
 
+RUN npm install -g @ionic/cli native-run cordova-res
+
 WORKDIR /env
 
 COPY . .
