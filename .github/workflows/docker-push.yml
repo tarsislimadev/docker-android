@@ -18,8 +18,8 @@ jobs:
           username: tmvdl
           password: ${{ secrets.GITHUBDOCKER }}
 
-      - name: Build and Tag
+      - name: Build Docker images
         run: sh env/build.sh
 
-      - name: Docker Push
-        run: docker push tmvdl/android -a
+      - name: Push images to Docker Hub
+        run: sh env/docker-push.sh
