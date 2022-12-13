@@ -6,7 +6,7 @@ FROM node:lts
 
 RUN mkdir -p /builds
 
-COPY --from=android /usr/lib/jvm/java-11-openjdk-amd64 /usr/lib/jvm/java-11-openjdk-amd64
+COPY --from=android /usr/lib/jvm /usr/lib/jvm
 
 COPY --from=android /opt/android-sdk-linux /opt/android-sdk-linux
 
