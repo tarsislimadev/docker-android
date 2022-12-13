@@ -1,1 +1,22 @@
+version: '3'
 
+services:
+  tag30:
+    image: tmvdl/android:30
+    build: './src/30'
+
+  angular:
+    image: tmvdl/android:angular
+    build: './src/angular'
+
+  cordova:
+    image: tmvdl/android:cordova
+    build: './src/cordova'
+
+  ionic:
+    image: tmvdl/android:ionic
+    build: './src/ionic'
+
+  react-native:
+    image: tmvdl/android:react-native
+    build: './src/react-native'
