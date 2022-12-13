@@ -1,6 +1,6 @@
 FROM androidsdk/android-30 as android
 
-RUN apt update -y && apt install -y openjdk-11
+RUN apt update -y && apt install -y openjdk-11-jdk
 
 FROM node:lts
 
