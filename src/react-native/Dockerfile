@@ -1,4 +1,4 @@
-FROM tmvdl/android:30
+FROM tmvdl/android:sdk30
 
 RUN npm install -g expo-cli@6
 

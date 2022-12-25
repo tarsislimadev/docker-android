@@ -1,5 +1,5 @@
 # Android
-FROM tmvdl/android:30
+FROM tmvdl/android:sdk30
 
 # Cordova
 WORKDIR /env
