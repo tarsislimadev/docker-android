@@ -1,9 +1,9 @@
 version: '3'
 
 services:
-  tag30:
-    image: tmvdl/android:30
-    build: './src/30'
+  sdk30:
+    image: tmvdl/android:sdk30
+    build: './src/sdk30'
 
   angular:
     image: tmvdl/android:angular
