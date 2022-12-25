@@ -1,6 +1,6 @@
 FROM tmvdl/android:sdk30
 
-RUN npm install -g expo-cli@6
+RUN npm install -g expo-cli@6 eas-cli@3
 
 WORKDIR /app
 
