@@ -1,6 +1,7 @@
 version: '3'
 
 services:
+
   sdk30:
     image: tmvdl/android:sdk30
     build: './src/sdk30'
@@ -8,10 +9,6 @@ services:
   angular:
     image: tmvdl/android:angular
     build: './src/angular'
-
-  cordova:
-    image: tmvdl/android:cordova
-    build: './src/cordova'
 
   ionic:
     image: tmvdl/android:ionic
