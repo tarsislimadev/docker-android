@@ -13,17 +13,17 @@ jobs:
   docker:
     runs-on: ubuntu-latest
     steps:
-      - name: Check out repository code
+      - name: Check out
         uses: actions/checkout@v2
 
-      - name: Login to DockerHub
+      - name: Docker login
         uses: docker/login-action@v1 
         with:
           username: tmvdl
           password: ${{ secrets.GITHUBDOCKER }}
 
-      - name: Build Docker images
-        run: sh env/build.sh
+      - name: Docker build
+        run: docker-compose build
 
-      - name: Push images to Docker Hub
-        run: sh env/docker-push.sh
+      - name: Docker push
+        run: docker push tmvdl/android -a
