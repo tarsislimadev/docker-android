@@ -8,11 +8,7 @@ FROM node:lts
 
 RUN mkdir /opt/gradle
 
-RUN wget 'https://downloads.gradle-dn.com/distributions/gradle-6.5-bin.zip' && unzip -d /opt/gradle gradle-6.5-bin.zip
-
-RUN wget 'https://downloads.gradle-dn.com/distributions/gradle-7.6-bin.zip' && unzip -d /opt/gradle gradle-7.6-bin.zip
-
-COPY --from=gradle /usr/lib/jvm /usr/lib/jvm
+COPY --from=gradle /opt/gradle /opt/gradle
 
 # Android
 
