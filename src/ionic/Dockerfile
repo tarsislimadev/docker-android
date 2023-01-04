@@ -10,7 +10,7 @@ ENV CORDOVA_KEYFILE=/builds/keystore.jks
 
 ENV CORDOVA_STOREPASS=keystore
 
-RUN npm install -g @ionic/cli native-run cordova-res
+RUN npm install -g @ionic/cli native-run cordova-res ionic cordova
 
 WORKDIR /app
 
