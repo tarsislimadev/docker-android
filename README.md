@@ -1,5 +1,7 @@
 # Docker Android
 
+[![github/actions/workflow/status](https://img.shields.io/github/actions/workflow/status/brtmvdl/docker-android/docker-push.yml)](https://img.shields.io/github/actions/workflow/status/brtmvdl/docker-android/docker-push.yml) [![github/license](https://img.shields.io/github/license/brtmvdl/docker-android)](https://img.shields.io/github/license/brtmvdl/docker-android) [![github/stars](https://img.shields.io/github/stars/brtmvdl/docker-android?style=social)](https://img.shields.io/github/stars/brtmvdl/antify?style=social)
+
 Imagem Docker para compilaçao de projetos Android
 
 ## Como usar
