@@ -2,12 +2,11 @@ name: Docker Push
 
 on:
   schedule:
-    - cron: '10 10 * * *'
-  workflow_dispatch:
+    - cron: '50 23 * * *'
   push:
     branches: 
       - 'main'
-
+  workflow_dispatch:
 
 jobs:
   docker:
@@ -27,3 +26,4 @@ jobs:
 
       - name: Docker push
         run: docker push tmvdl/android -a
+
