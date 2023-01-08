@@ -3,17 +3,17 @@ version: '3'
 services:
 
   sdk30:
-    image: tmvdl/android:sdk30
+    image: 'tmvdl/android:sdk30'
     build: './src/sdk30'
 
   angular:
-    image: tmvdl/android:angular
+    image: 'tmvdl/android:angular'
     build: './src/angular'
 
   ionic:
-    image: tmvdl/android:ionic
+    image: 'tmvdl/android:ionic'
     build: './src/ionic'
 
   react-native:
-    image: tmvdl/android:react-native
+    image: 'tmvdl/android:react-native'
     build: './src/react-native'
