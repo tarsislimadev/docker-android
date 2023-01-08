@@ -12,6 +12,8 @@ ENV CORDOVA_STOREPASS=keystore
 
 RUN npm install -g @ionic/cli native-run cordova-res ionic cordova
 
+RUN cordova telemetry off
+
 WORKDIR /app
 
 RUN cordova create hello com.example.hello
