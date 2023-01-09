@@ -1,4 +1,4 @@
-FROM '../sdk30'
+FROM tmvdl/android:sdk30
 
 ENV CORDOVA_VALIDITY=7
 
