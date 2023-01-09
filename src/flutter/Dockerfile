@@ -2,7 +2,7 @@ FROM gradle:6-jdk11 as gradle
 
 FROM androidsdk/android-30 as android
 
-FROM dart:stable
+FROM cirrusci/flutter:3.3.10
 
 # Gradle
 
