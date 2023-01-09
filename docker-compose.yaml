@@ -10,6 +10,11 @@ services:
     image: 'tmvdl/android:sdk30-jdk8'
     build: './src/sdk30-jdk8'
 
+  flutter:
+    image: 'tmvdl/android:flutter'
+    build: './src/flutter'
+
+
   angular:
     image: 'tmvdl/android:angular'
     build: './src/angular'
