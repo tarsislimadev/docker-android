@@ -18,6 +18,10 @@ services:
     image: 'tmvdl/android:ionic'
     build: './src/ionic'
 
+  ionic-jdk8:
+    image: 'tmvdl/android:ionic-jdk8'
+    build: './src/ionic-jdk8'
+
   react-native:
     image: 'tmvdl/android:react-native'
     build: './src/react-native'
