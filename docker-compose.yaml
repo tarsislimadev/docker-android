@@ -6,6 +6,10 @@ services:
     image: 'tmvdl/android:sdk30'
     build: './src/sdk30'
 
+  sdk30-jdk8:
+    image: 'tmvdl/android:sdk30-jdk8'
+    build: './src/sdk30-jdk8'
+
   angular:
     image: 'tmvdl/android:angular'
     build: './src/angular'
