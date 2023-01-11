@@ -1,14 +1,12 @@
 # Docker Android
 
-[![github/actions/workflow/status](https://img.shields.io/github/actions/workflow/status/brtmvdl/docker-android/docker-push.yml)](https://img.shields.io/github/actions/workflow/status/brtmvdl/docker-android/docker-push.yml) [![github/license](https://img.shields.io/github/license/brtmvdl/docker-android)](https://img.shields.io/github/license/brtmvdl/docker-android) [![github/stars](https://img.shields.io/github/stars/brtmvdl/docker-android?style=social)](https://img.shields.io/github/stars/brtmvdl/antify?style=social)
+[![github/actions/workflow/status](https://img.shields.io/github/actions/workflow/status/brtmvdl/docker-android/docker-push.yml?label=docker)](https://img.shields.io/github/actions/workflow/status/brtmvdl/docker-android/docker-push.yml) [![github/license](https://img.shields.io/github/license/brtmvdl/docker-android)](https://img.shields.io/github/license/brtmvdl/docker-android) [![github/stars](https://img.shields.io/github/stars/brtmvdl/docker-android?style=social)](https://img.shields.io/github/stars/brtmvdl/antify?style=social)
 
-Imagem Docker para compilaçao de projetos Android
+Docker image to compile Android projects.
 
-## Como usar
+## Documentation
 
-Instalar o [Docker](https://docs.docker.com/engine/install/).
-
-Criar um arquivo `docker-compose.yaml` na raiz do projeto com a imagem [tmvdl/android:sdk30](https://hub.docker.com/r/tmvdl/android).
+Install [Docker](https://docs.docker.com/engine/install/).
 
 ```yaml
 # docker-compose.yaml
@@ -17,34 +15,17 @@ version: '3'
 services:
   app:
     image: tmvdl/android:sdk30
-    volumes:
-      - .:/app
 ```
 
-Subir o container para a construção do build
+Run the container
 
 ```bash
-docker-compose up --build
+docker-compose up
 ```
 
 ## Tags
 
-Algumas tags são mais especificas para desenvolvimento com frameworks Node.js
-
-### Cordova
-
-```yaml
-version: '3'
-
-services:
-  app:
-    image: tmvdl/android:cordova
-    volumes:
-      - .:/app
-      - ./builds:/builds
-```
-
-### Ionic (com Cordova)
+### Ionic
 
 ```yaml
 version: '3'
@@ -52,9 +33,6 @@ version: '3'
 services:
   app:
     image: tmvdl/android:ionic
-    volumes:
-      - .:/app
-      - ./builds:/builds
 ```
 
 ### React Native
@@ -65,15 +43,8 @@ version: '3'
 services:
   app:
     image: tmvdl/android:react-native
-    volumes:
-      - .:/app
-      - ./builds:/builds
 ```
 
 ## License
 
 [MIT](LICENSE)
-
-## Update
-
-Atualizado em 18/11/2021
