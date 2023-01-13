@@ -6,13 +6,7 @@ FROM node:lts
 
 # Gradle
 
-RUN mkdir -p /usr/lib/jvm
-
-COPY --from=gradle /usr/lib/jvm /usr/lib/jvm
-
-RUN mkdir -p /opt/gradle
-
-COPY --from=gradle /opt/gradle /opt/gradle
+COPY --from=gradle /opt /opt
 
 # Android
 
