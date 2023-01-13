@@ -14,7 +14,6 @@ services:
     image: 'tmvdl/android:flutter'
     build: './src/flutter'
 
-
   angular:
     image: 'tmvdl/android:angular'
     build: './src/angular'
