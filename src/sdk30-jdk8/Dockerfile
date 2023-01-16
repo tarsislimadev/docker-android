@@ -6,7 +6,7 @@ FROM node:lts
 
 # Gradle
 
-COPY --from=gradle /opt /opt
+COPY --from=gradle /opt/java /opt/java
 
 # Android
 
@@ -20,10 +20,10 @@ ENV ANDROID_SDK_HOME=/opt/android-sdk-linux
 
 ENV ANDROID_SDK_ROOT=/opt/android-sdk-linux
 
-ENV JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
+ENV JAVA_HOME=/opt/java/openjdk
 
-ENV JDK_HOME=/usr/lib/jvm/java-8-openjdk-amd64
+ENV JDK_HOME=/opt/java/openjdk
 
-ENV PATH=$JAVA_HOME/bin:$ANDROID_HOME/emulator:$ANDROID_HOME/tools:$ANDROID_HOME/tools/bin:$ANDROID_HOME/platform-tools:$PATH
+ENV PATH=$JAVA_HOME/bin:$ANDROID_HOME/emulator:$ANDROID_HOME/tools:$ANDROID_HOME/tools/bin:$ANDROID_HOME/platform-tools:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$PATH
 
 CMD echo OK
