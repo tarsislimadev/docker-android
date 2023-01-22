@@ -1,6 +1,6 @@
-FROM tmvdl/android:sdk30
+FROM tmvdl/android:sdk30-jdk8
 
-RUN npm install -g expo-cli@6 eas-cli@3
+RUN npm install -g expo-cli@6 eas-cli@3 react-scripts
 
 WORKDIR /app
 
