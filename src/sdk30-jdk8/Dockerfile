@@ -6,7 +6,15 @@ FROM node:lts
 
 # Gradle
 
-COPY --from=gradle /opt/java /opt/java
+# WORKDIR /downloads
+
+# ENV GRADLE_VERSION=6.9.3
+
+# RUN wget 'https://downloads.gradle-dn.com/distributions/gradle-${GRADLE_VERSION}}-bin.zip' \
+#   && mkdir /opt/gradle \
+#   && unzip -d /opt/gradle gradle-${GRADLE_VERSION}}-bin.zip
+
+COPY --from=gradle /opt /opt
 
 # Android
 
