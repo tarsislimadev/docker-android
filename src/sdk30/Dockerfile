@@ -16,27 +16,25 @@ ENV PATH=$JAVA_HOME/bin:$ANDROID_HOME/emulator:$ANDROID_HOME/tools:$ANDROID_HOME
 
 RUN apt update -y \
   && echo openssh-client \
-  && apt-get install -y openssh-client \
+  && apt install -y openssh-client \
   && echo locales \
-  && apt-get install -y locales \
+  && apt install -y locales \
   && echo expect \
-  && apt-get install -y expect \
+  && apt install -y expect \
   && echo bsdtar \
-  && apt-get install -y bsdtar \
+  && apt install -y bsdtar \
   && echo unzip \
-  && apt-get install -y unzip \
+  && apt install -y unzip \
   && echo curl \
-  && apt-get install -y curl \
+  && apt install -y curl \
   && echo make \
-  && apt-get install -y make \
+  && apt install -y make \
   && echo wget \
-  && apt-get install -y wget \
+  && apt install -y wget \
   && echo vim \
-  && apt-get install -y vim \
+  && apt install -y vim \
   && echo git \
-  && apt-get install -y git
-
-RUN apt update -y \
+  && apt install -y git \
   && echo android-sdk \
   && apt install -y android-sdk \
   && echo gradle \
@@ -48,4 +46,6 @@ RUN apt update -y \
   && echo android-sdk-platform-tools \
   && apt install -y android-sdk-platform-tools \
   && echo adb \
-  && apt install -y adb
+  && apt install -y adb \
+  && echo nodejs \
+  && apt install -y nodejs
