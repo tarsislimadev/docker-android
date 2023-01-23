@@ -2,6 +2,8 @@ FROM cirrusci/flutter:3.3.10 as flutter
 
 FROM tmvdl/android:sdk30
 
+RUN curl -fsSL https://deb.nodesource.com/setup_lts.x | bash - && apt-get install -y nodejs 
+
 COPY --from=flutter /sdks /sdks
 
 ENV PATH=${PATH}:/opt/android-sdk-linux/cmdline-tools/latest/bin:/opt/android-sdk-linux/platform-tools:/opt/android-sdk-linux/emulator:/sdks/flutter/bin:/sdks/flutter/bin/cache/dart-sdk/bin
