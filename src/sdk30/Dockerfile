@@ -22,7 +22,6 @@ RUN apt update -y \
   && apt install -y locales \
   && apt install -y expect \
   && apt install -y gradle \
-  && apt install -y bsdtar \
   && apt install -y nodejs \
   && apt install -y maven \
   && apt install -y unzip \
