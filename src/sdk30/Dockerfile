@@ -1,4 +1,4 @@
-FROM tmvdl/node:git
+FROM node:lts
 
 # jdk 
 
