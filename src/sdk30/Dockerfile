@@ -14,6 +14,8 @@ ENV JDK_HOME=/usr/lib/jvm/java-11-openjdk-amd64
 
 ENV PATH=$JAVA_HOME/bin:$ANDROID_HOME/emulator:$ANDROID_HOME/tools:$ANDROID_HOME/tools/bin:$ANDROID_HOME/platform-tools:$PATH
 
+RUN apt update -y && apt install -y curl
+
 RUN curl -fsSL https://deb.nodesource.com/setup_lts.x | bash - && apt-get install -y nodejs 
 
 RUN apt update -y \

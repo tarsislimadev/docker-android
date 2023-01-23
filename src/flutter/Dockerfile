@@ -2,6 +2,8 @@ FROM cirrusci/flutter:3.3.10 as flutter
 
 FROM tmvdl/android:sdk30
 
+RUN apt update -y && apt install -y curl
+
 RUN curl -fsSL https://deb.nodesource.com/setup_lts.x | bash - && apt-get install -y nodejs 
 
 COPY --from=flutter /sdks /sdks
