@@ -1,16 +1,4 @@
-FROM ubuntu:22.10 
-
-# curl 
-
-RUN apt update -y && apt install -y curl 
-
-# node 
-
-RUN apt update -y && apt install -y nodejs 
-
-RUN curl -fsSL https://deb.nodesource.com/setup_lts.x | bash - 
-
-RUN apt update -y && apt install -y nodejs 
+FROM tmvdl/node:git
 
 # jdk 
 
