@@ -15,6 +15,28 @@ ENV JDK_HOME=/usr/lib/jvm/java-11-openjdk-amd64
 ENV PATH=$JAVA_HOME/bin:$ANDROID_HOME/emulator:$ANDROID_HOME/tools:$ANDROID_HOME/tools/bin:$ANDROID_HOME/platform-tools:$PATH
 
 RUN apt update -y \
+  && echo openssh-client \
+  && apt-get install -y openssh-client \
+  && echo locales \
+  && apt-get install -y locales \
+  && echo expect \
+  && apt-get install -y expect \
+  && echo bsdtar \
+  && apt-get install -y bsdtar \
+  && echo unzip \
+  && apt-get install -y unzip \
+  && echo curl \
+  && apt-get install -y curl \
+  && echo make \
+  && apt-get install -y make \
+  && echo wget \
+  && apt-get install -y wget \
+  && echo vim \
+  && apt-get install -y vim \
+  && echo git \
+  && apt-get install -y git
+
+RUN apt update -y \
   && echo android-sdk \
   && apt install -y android-sdk \
   && echo gradle \
