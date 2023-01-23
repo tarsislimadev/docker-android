@@ -15,37 +15,20 @@ ENV JDK_HOME=/usr/lib/jvm/java-11-openjdk-amd64
 ENV PATH=$JAVA_HOME/bin:$ANDROID_HOME/emulator:$ANDROID_HOME/tools:$ANDROID_HOME/tools/bin:$ANDROID_HOME/platform-tools:$PATH
 
 RUN apt update -y \
-  && echo openssh-client \
-  && apt install -y openssh-client \
-  && echo locales \
-  && apt install -y locales \
-  && echo expect \
-  && apt install -y expect \
-  && echo bsdtar \
-  && apt install -y bsdtar \
-  && echo unzip \
-  && apt install -y unzip \
-  && echo curl \
-  && apt install -y curl \
-  && echo make \
-  && apt install -y make \
-  && echo wget \
-  && apt install -y wget \
-  && echo vim \
-  && apt install -y vim \
-  && echo git \
-  && apt install -y git \
-  && echo android-sdk \
-  && apt install -y android-sdk \
-  && echo gradle \
-  && apt install -y gradle \
-  && echo maven \
-  && apt install -y maven \
-  && echo openjdk-11-jdk \
-  && apt install -y openjdk-11-jdk \
-  && echo android-sdk-platform-tools \
   && apt install -y android-sdk-platform-tools \
-  && echo adb \
+  && apt install -y openssh-client \
+  && apt install -y openjdk-11-jdk \
+  && apt install -y android-sdk \
+  && apt install -y locales \
+  && apt install -y expect \
+  && apt install -y gradle \
+  && apt install -y bsdtar \
+  && apt install -y nodejs \
+  && apt install -y maven \
+  && apt install -y unzip \
+  && apt install -y curl \
+  && apt install -y make \
+  && apt install -y wget \
   && apt install -y adb \
-  && echo nodejs \
-  && apt install -y nodejs
+  && apt install -y vim \
+  && apt install -y git
