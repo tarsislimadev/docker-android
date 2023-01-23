@@ -15,9 +15,3 @@ ENV NG_APP=app
 WORKDIR /env
 
 COPY . .
-
-RUN wget https://github.com/google/bundletool/releases/download/1.6.0/bundletool-all-1.6.0.jar
-
-WORKDIR /app
-
-CMD sh /env/build.sh
