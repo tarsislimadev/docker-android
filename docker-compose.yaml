@@ -10,10 +10,6 @@ services:
     image: 'tmvdl/android:flutter'
     build: './src/flutter'
 
-  angular:
-    image: 'tmvdl/android:angular'
-    build: './src/angular'
-
   ionic:
     image: 'tmvdl/android:ionic'
     build: './src/ionic'
