@@ -4,7 +4,7 @@ FROM tmvdl/android:sdk30
 
 RUN apt update -y && apt install -y curl
 
-RUN curl -fsSL https://deb.nodesource.com/setup_lts.x | bash - && apt-get install -y nodejs 
+RUN curl -fsSL https://deb.nodesource.com/setup_lts.x | sh - && apt-get install -y nodejs 
 
 COPY --from=flutter /sdks /sdks
 

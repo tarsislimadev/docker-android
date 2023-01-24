@@ -19,7 +19,7 @@ services:
 
 Run the container
 
-```bash
+```sh
 docker-compose up
 ```
 
