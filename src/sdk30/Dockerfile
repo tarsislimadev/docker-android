@@ -12,12 +12,18 @@ ENV PATH=$JAVA_HOME/bin:$JDK_HOME:$PATH
 
 RUN apt update -y && apt install -y openjdk-11-jdk 
 
+RUN mkdir -p /opt/gradle
+
+# gradle 7.4.2
+
+RUN wget https://services.gradle.org/distributions/gradle-7.4.2-bin.zip \
+  && unzip -d /opt/gradle gradle-7.4.2-bin.zip \
+  && ln -sF /opt/gradle/gradle-7.4.2/bin/gradle /usr/bin/gradle 
+
 # gradle 7.1.1
 
 RUN wget https://services.gradle.org/distributions/gradle-7.1.1-bin.zip \
-  && mkdir -p /opt/gradle \
   && unzip -d /opt/gradle gradle-7.1.1-bin.zip \
-  && rm -rf /usr/bin/gradle \
   && ln -sF /opt/gradle/gradle-7.1.1/bin/gradle /usr/bin/gradle 
 
 # android sdk30
