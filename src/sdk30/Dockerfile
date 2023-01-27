@@ -2,15 +2,15 @@ FROM node:lts
 
 RUN apt update -y 
 
-# java 11 
+# java 8 
 
-ENV JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64 
+ENV JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64 
 
-ENV JDK_HOME=/usr/lib/jvm/java-11-openjdk-amd64 
+ENV JDK_HOME=/usr/lib/jvm/java-8-openjdk-amd64 
 
 ENV PATH=$JAVA_HOME/bin:$JDK_HOME:$PATH 
 
-RUN apt update -y && apt install -y openjdk-11-jdk 
+RUN apt update -y && apt install -y openjdk-8-jdk 
 
 RUN mkdir -p /opt/gradle
 
