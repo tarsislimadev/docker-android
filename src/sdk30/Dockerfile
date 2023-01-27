@@ -14,9 +14,11 @@ RUN apt update -y && apt install -y openjdk-11-jdk
 
 # gradle 7.1.1
 
-RUN wget https://services.gradle.org/distributions/gradle-7.1.1-bin.zip  \
+RUN wget https://services.gradle.org/distributions/gradle-7.1.1-bin.zip \
   && mkdir -p /opt/gradle \
-  && unzip -d /opt/gradle gradle-7.1.1-bin.zip
+  && unzip -d /opt/gradle gradle-7.1.1-bin.zip \
+  && rm -rf /usr/bin/gradle \
+  && ln -sF /opt/gradle/gradle-7.1.1/bin/gradle /usr/bin/gradle 
 
 # android sdk30
 
