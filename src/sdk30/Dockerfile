@@ -32,7 +32,7 @@ ENV ANDROID_SDK_ROOT=/opt/android-sdk-linux
 
 ENV PATH=$ANDROID_HOME/emulator:$ANDROID_HOME/tools:$ANDROID_HOME/tools/bin:$ANDROID_HOME/platform-tools:$PATH 
 
-RUN apt update -y && apt install -y android-sdk android-sdk-platform-tools adb 
+RUN apt update -y && apt install -y android-sdk android-sdk-platform-tools adb android-sdk-build-tools android-sdk-libsparse-utils 
 
 # others 
 
