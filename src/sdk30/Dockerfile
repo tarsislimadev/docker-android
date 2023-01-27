@@ -2,7 +2,7 @@ FROM node:lts
 
 RUN apt update -y 
 
-# jdk 
+# java 11 
 
 ENV JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64 
 
@@ -12,11 +12,13 @@ ENV PATH=$JAVA_HOME/bin:$JDK_HOME:$PATH
 
 RUN apt update -y && apt install -y openjdk-11-jdk 
 
-# maven + gradle 
+# gradle 7.1.1
 
-RUN apt update -y && apt install -y gradle maven 
+RUN wget https://services.gradle.org/distributions/gradle-7.1.1-bin.zip  \
+  && mkdir -p /opt/gradle \
+  && unzip -d /opt/gradle gradle-7.1.1-bin.zip
 
-# android + adb 
+# android sdk30
 
 ENV ANDROID_HOME=/opt/android-sdk-linux 
 
