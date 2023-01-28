@@ -2,6 +2,10 @@ version: '3'
 
 services:
 
+  api29:
+    image: 'tmvdl/android:api29'
+    build: './src/api29'
+
   sdk30:
     image: 'tmvdl/android:sdk30'
     build: './src/sdk30'
