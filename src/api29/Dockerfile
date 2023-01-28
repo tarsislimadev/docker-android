@@ -2,7 +2,7 @@ FROM circleci/openjdk:8 as openjdk
 
 FROM circleci/android:api-29-node
 
-RUN apt update -y && apt install -y openssh-client locales expect unzip make wget git curl 
+# RUN apt update -y && apt install -y openssh-client locales expect unzip make wget git curl 
 
 # jdk 8
 
