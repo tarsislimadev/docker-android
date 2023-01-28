@@ -12,8 +12,12 @@ ENV PATH=/usr/local/openjdk-8/bin:$PATH
 
 # gradle 6.5.1
 
+USER root
+
 RUN mkdir -p /opt/gradle
 
 RUN wget https://services.gradle.org/distributions/gradle-6.5.1-bin.zip \
   && unzip -d /opt/gradle gradle-6.5.1-bin.zip \
   && ln -sF /opt/gradle/gradle-6.5.1/bin/gradle /usr/bin/gradle 
+
+USER circleci
