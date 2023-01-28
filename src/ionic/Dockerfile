@@ -1,4 +1,4 @@
-FROM tmvdl/android:sdk30
+FROM tmvdl/android:api29
 
 RUN apt update -y && apt install -y curl
 
