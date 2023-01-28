@@ -22,9 +22,9 @@ RUN wget https://services.gradle.org/distributions/gradle-7.4.2-bin.zip \
 
 # gradle 7.1.1
 
-RUN wget https://services.gradle.org/distributions/gradle-7.1.1-bin.zip \
-  && unzip -d /opt/gradle gradle-7.1.1-bin.zip \
-  && ln -sF /opt/gradle/gradle-7.1.1/bin/gradle /usr/bin/gradle 
+# RUN wget https://services.gradle.org/distributions/gradle-7.1.1-bin.zip \
+#   && unzip -d /opt/gradle gradle-7.1.1-bin.zip \
+#   && ln -sF /opt/gradle/gradle-7.1.1/bin/gradle /usr/bin/gradle 
 
 # android sdk30
 
