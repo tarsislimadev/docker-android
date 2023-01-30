@@ -20,12 +20,6 @@ RUN wget https://services.gradle.org/distributions/gradle-7.4.2-bin.zip \
   && unzip -d /opt/gradle gradle-7.4.2-bin.zip \
   && ln -sF /opt/gradle/gradle-7.4.2/bin/gradle /usr/bin/gradle 
 
-# gradle 7.1.1
-
-# RUN wget https://services.gradle.org/distributions/gradle-7.1.1-bin.zip \
-#   && unzip -d /opt/gradle gradle-7.1.1-bin.zip \
-#   && ln -sF /opt/gradle/gradle-7.1.1/bin/gradle /usr/bin/gradle 
-
 # android sdk30
 
 ENV ANDROID_HOME=/opt/android-sdk-linux 

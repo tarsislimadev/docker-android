@@ -2,7 +2,7 @@ FROM circleci/openjdk:8 as openjdk
 
 FROM circleci/android:api-29-node
 
-# RUN apt update -y && apt install -y openssh-client locales expect unzip make wget git curl 
+RUN apt update -y && apt install -y openssh-client locales expect unzip make wget git curl 
 
 # jdk 8
 
@@ -21,3 +21,9 @@ RUN wget https://services.gradle.org/distributions/gradle-6.5.1-bin.zip \
   && ln -sF /opt/gradle/gradle-6.5.1/bin/gradle /usr/bin/gradle 
 
 USER circleci
+
+# node lts
+
+RUN wget https://deb.nodesource.com/setup_lts.x && sh setup_lts.x \
+  && apt update -y \
+  && apt install -y nodejs 
