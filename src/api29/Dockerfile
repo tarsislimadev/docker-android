@@ -2,6 +2,8 @@ FROM circleci/openjdk:8 as openjdk
 
 FROM circleci/android:api-29-node
 
+USER root
+
 RUN apt update -y && apt install -y openssh-client locales expect unzip make wget git curl 
 
 # jdk 8
@@ -11,8 +13,6 @@ COPY --from=openjdk /usr/local/openjdk-8/ /usr/local/openjdk-8/
 ENV PATH=/usr/local/openjdk-8/bin:$PATH
 
 # gradle 6.5.1
-
-USER root
 
 RUN mkdir -p /opt/gradle
 
