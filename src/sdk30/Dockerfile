@@ -36,4 +36,4 @@ RUN apt update -y && apt install -y android-sdk android-sdk-platform-tools adb a
 
 # others 
 
-RUN apt update -y && apt install -y openssh-client locales expect unzip make wget git 
+RUN apt update -y && apt install -y openssh-client locales expect unzip wget git 
