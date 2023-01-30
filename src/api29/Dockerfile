@@ -4,7 +4,7 @@ FROM circleci/android:api-29-node
 
 USER root
 
-RUN apt update -y && apt install -y openssh-client locales expect unzip make wget git curl 
+RUN apt update -y && apt install -y make wget git curl 
 
 # jdk 8
 
