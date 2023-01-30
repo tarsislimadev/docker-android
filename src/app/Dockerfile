@@ -10,15 +10,15 @@ WORKDIR /opt
 
 RUN apt update -y && apt install -y curl unzip
 
-# gradle 6.5.1
+# gradle 7.1.1
 
-RUN wget https://services.gradle.org/distributions/gradle-6.5.1-bin.zip
+RUN wget https://services.gradle.org/distributions/gradle-7.1.1-bin.zip
 
 RUN mkdir /opt/gradle
 
-RUN unzip -d /opt/gradle gradle-6.5.1-bin.zip
+RUN unzip -d /opt/gradle gradle-7.1.1-bin.zip
 
-ENV PATH /opt/gradle/gradle-6.5.1/bin:$PATH
+ENV PATH /opt/gradle/gradle-7.1.1/bin:$PATH
 
 # android 29
 
