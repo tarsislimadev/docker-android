@@ -1,3 +1,5 @@
+FROM circleci/android:api-29-node as android
+
 # java 8
 
 FROM openjdk:8
@@ -20,18 +22,9 @@ ENV PATH /opt/gradle/gradle-6.5.1/bin:$PATH
 
 # android 29
 
-ENV ANDROID_STUDIO android-studio-2022.1.1.19-linux.tar.gz
+COPY --from=android /opt/android /opt/android
 
-RUN curl -sSL "https://redirector.gvt1.com/edgedl/android/studio/ide-zips/2022.1.1.19/${ANDROID_STUDIO}" \
-  -H "authority: redirector.gvt1.com" \
-  -H "referer: https://developer.android.com/" \
-  --compressed --output "${ANDROID_STUDIO}"
-
-RUN ls -laR 
-
-RUN tar -xf "${ANDROID_STUDIO}" && rm -rf "${ANDROID_STUDIO}"
-
-ENV PATH /opt/android-studio/bin:$PATH
+ENV ANDROID_SDK_ROOT /opt/android/sdk
 
 # Command line tools
 
