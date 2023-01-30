@@ -2,9 +2,9 @@ FROM circleci/openjdk:8 as openjdk
 
 FROM circleci/android:api-29-node
 
-USER root
-
 RUN apt update -y && apt install -y make wget git curl 
+
+USER root
 
 # jdk 8
 
