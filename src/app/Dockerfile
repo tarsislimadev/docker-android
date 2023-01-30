@@ -27,7 +27,7 @@ RUN curl -sSL "https://redirector.gvt1.com/edgedl/android/studio/ide-zips/2022.1
 
 RUN ls -laR 
 
-RUN unzip "${ANDROID_STUDIO}" && rm -rf "${ANDROID_STUDIO}"
+RUN tar -xf "${ANDROID_STUDIO}" && rm -rf "${ANDROID_STUDIO}"
 
 # Command line tools
 
