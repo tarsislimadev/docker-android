@@ -44,12 +44,18 @@ RUN curl -sSL "https://dl.google.com/android/repository/${COMMANDLINETOOLS}" \
 
 RUN unzip "${COMMANDLINETOOLS}" && rm -rf "${COMMANDLINETOOLS}"
 
+ENV PATH /opt/cmdline-tools/bin:$PATH
+
 # node lts
 
-## TODO ## 
+RUN wget https://deb.nodesource.com/setup_lts.x
+
+RUN bash setup_lts.x
+
+RUN apt update -y && apt install -y nodejs
 
 # ionic
 
-## TODO ## 
+RUN npm install -g @ionic/cli native-run cordova-res ionic cordova
 
 CMD echo OK
