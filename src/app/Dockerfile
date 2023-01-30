@@ -2,7 +2,7 @@
 
 FROM openjdk:8
 
-WORKDIR /app 
+WORKDIR /opt 
 
 # somethings
 
@@ -16,6 +16,8 @@ RUN mkdir /opt/gradle
 
 RUN unzip -d /opt/gradle gradle-6.5.1-bin.zip
 
+ENV PATH /opt/gradle/gradle-6.5.1/bin:$PATH
+
 # android 29
 
 ENV ANDROID_STUDIO android-studio-2022.1.1.19-linux.tar.gz
@@ -28,6 +30,8 @@ RUN curl -sSL "https://redirector.gvt1.com/edgedl/android/studio/ide-zips/2022.1
 RUN ls -laR 
 
 RUN tar -xf "${ANDROID_STUDIO}" && rm -rf "${ANDROID_STUDIO}"
+
+ENV PATH /opt/android-studio/bin:$PATH
 
 # Command line tools
 
