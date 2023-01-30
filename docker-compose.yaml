@@ -6,9 +6,9 @@ services:
     image: 'tmvdl/android:api29'
     build: './src/api29'
 
-  sdk30:
-    image: 'tmvdl/android:sdk30'
-    build: './src/sdk30'
+  # sdk30:
+  #   image: 'tmvdl/android:sdk30'
+  #   build: './src/sdk30'
 
   flutter:
     image: 'tmvdl/android:flutter'
