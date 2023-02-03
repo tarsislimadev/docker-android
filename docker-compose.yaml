@@ -6,9 +6,9 @@ services:
     image: 'tmvdl/android:latest'
     build: './src/latest'
 
-  flutter:
-    image: 'tmvdl/android:flutter'
-    build: './src/flutter'
+  # flutter:
+  #   image: 'tmvdl/android:flutter'
+  #   build: './src/flutter'
 
   react-native:
     image: 'tmvdl/android:react-native'
