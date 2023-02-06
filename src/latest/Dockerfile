@@ -42,7 +42,7 @@ ENV PATH /opt/cmdline-tools/bin:$PATH
 
 # node lts
 
-RUN wget https://deb.nodesource.com/setup_lts.x
+RUN curl -sSL https://deb.nodesource.com/setup_lts.x --output setup_lts.x
 
 RUN bash setup_lts.x
 
