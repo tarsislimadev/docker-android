@@ -2,7 +2,7 @@ FROM tmvdl/android:api29
 
 # node lts
 
-RUN wget https://deb.nodesource.com/setup_lts.x
+RUN curl https://deb.nodesource.com/setup_lts.x --output setup_lts.x
 
 RUN bash setup_lts.x
 
