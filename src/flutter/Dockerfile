@@ -4,11 +4,15 @@ FROM tmvdl/android:api29
 
 RUN apt update -y && apt install -y wget curl
 
+# node lts
+
 RUN curl -sSL https://deb.nodesource.com/setup_lts.x --output setup_lts.x
 
-RUN sh setup_lts.x 
+RUN bash setup_lts.x
 
-RUN apt update -y && apt install -y nodejs 
+RUN apt update -y && apt install -y nodejs
+
+# sdk
 
 COPY --from=flutter /sdks /sdks
 
