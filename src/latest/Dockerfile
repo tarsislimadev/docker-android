@@ -4,7 +4,7 @@ FROM circleci/android:api-29-node as android
 
 FROM openjdk:8
 
-WORKDIR /opt 
+WORKDIR /opt
 
 # somethings
 
@@ -38,13 +38,11 @@ RUN curl -sSL "https://dl.google.com/android/repository/${COMMANDLINETOOLS}" \
 
 RUN unzip "${COMMANDLINETOOLS}" && rm -rf "${COMMANDLINETOOLS}"
 
-RUN mv ./cmdline-tools /opt 
-
 ENV PATH /opt/cmdline-tools/bin:$PATH
 
 # node lts
 
-RUN curl -sSL https://deb.nodesource.com/setup_lts.x | sudo bash - 
+RUN curl -sSL https://deb.nodesource.com/setup_lts.x | sudo bash -
 
 RUN apt update -y && apt install -y nodejs
 
