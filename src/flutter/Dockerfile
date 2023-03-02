@@ -6,9 +6,9 @@ RUN apt update -y && apt install -y wget curl
 
 # node lts
 
-RUN curl -sSL https://deb.nodesource.com/setup_lts.x | bash - 
+# RUN curl -sSL https://deb.nodesource.com/setup_lts.x | bash - 
 
-RUN apt update -y && apt install -y nodejs
+# RUN apt update -y && apt install -y nodejs
 
 # sdk
 

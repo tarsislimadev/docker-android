@@ -42,9 +42,9 @@ ENV PATH /opt/cmdline-tools/bin:$PATH
 
 # node lts
 
-RUN curl -sSL https://deb.nodesource.com/setup_lts.x | bash -
+# RUN curl -sSL https://deb.nodesource.com/setup_lts.x | bash -
 
-RUN apt update -y && apt install -y nodejs
+# RUN apt update -y && apt install -y nodejs
 
 # ionic
 
