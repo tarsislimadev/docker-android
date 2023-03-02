@@ -38,6 +38,8 @@ RUN curl -sSL "https://dl.google.com/android/repository/${COMMANDLINETOOLS}" \
 
 RUN unzip "${COMMANDLINETOOLS}" && rm -rf "${COMMANDLINETOOLS}"
 
+RUN mv ./cmdline-tools /opt 
+
 ENV PATH /opt/cmdline-tools/bin:$PATH
 
 # node lts
