@@ -48,6 +48,6 @@ ENV PATH /opt/cmdline-tools/bin:$PATH
 
 # ionic
 
-RUN npm install -g @ionic/cli native-run cordova-res ionic cordova
+# RUN npm install -g @ionic/cli native-run cordova-res ionic cordova
 
 CMD echo OK
