@@ -8,4 +8,4 @@ FROM tmvdl/android:api29
 
 # react native
 
-# RUN npm install -g expo-cli@6 eas-cli@3 react-scripts
+RUN npm install -g expo-cli@6 eas-cli@3 react-scripts
