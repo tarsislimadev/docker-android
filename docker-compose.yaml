@@ -10,6 +10,14 @@ services:
   #   image: 'tmvdl/android:flutter'
   #   build: './src/flutter'
 
-  react-native:
-    image: 'tmvdl/android:react-native'
-    build: './src/react-native'
+  # react-native:
+  #   image: 'tmvdl/android:react-native'
+  #   build: './src/react-native'
+
+  # api-29:
+  #   image: 'tmvdl/android:api-29'
+  #   build: './src/api-29'
+
+  api-30:
+    image: 'tmvdl/android:api-30'
+    build: './src/api-30'
