@@ -1,4 +1,4 @@
-FROM tmvdl/android:api29
+FROM tmvdl/android:api-30
 
 # node lts
 

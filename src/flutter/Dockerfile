@@ -1,6 +1,6 @@
 FROM cirrusci/flutter:3.3.10 as flutter
 
-FROM tmvdl/android:api29
+FROM tmvdl/android:api-30
 
 RUN apt update -y && apt install -y wget curl
 
