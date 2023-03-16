@@ -2,7 +2,7 @@ FROM cirrusci/flutter:3.3.10 as flutter
 
 FROM tmvdl/android:api-30
 
-RUN sudo apt update -y && sudo apt install -y wget curl
+# RUN sudo apt update -y && sudo apt install -y wget curl
 
 COPY --from=flutter /sdks /sdks
 
