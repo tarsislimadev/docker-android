@@ -8,7 +8,7 @@ WORKDIR /opt
 
 # somethings
 
-RUN apt update -y && apt install -y curl unzip
+RUN apt update -y && apt install -y sudo curl unzip
 
 # gradle 7.3.3
 
@@ -50,4 +50,4 @@ ENV PATH /opt/cmdline-tools/bin:$PATH
 
 # RUN npm install -g @ionic/cli native-run cordova-res ionic cordova
 
-CMD echo OK
+ENTRYPOINT echo OK
