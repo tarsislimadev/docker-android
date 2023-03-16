@@ -2,9 +2,9 @@ FROM tmvdl/android:api-30
 
 # node lts
 
-# RUN curl -sSL https://deb.nodesource.com/setup_lts.x | sudo bash -
+RUN curl -sSL https://deb.nodesource.com/setup_lts.x | sudo bash -
 
-# RUN apt update -y && apt install -y nodejs
+RUN apt update -y && apt install -y nodejs
 
 # react native
 
