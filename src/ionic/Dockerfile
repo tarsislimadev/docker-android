@@ -1,8 +1,10 @@
 FROM tmvdl/android:api-30
 
-RUN apt update -y && apt install -y sudo curl
+RUN apt update -y && apt install -y curl
 
-RUN curl -sSL https://deb.nodesource.com/setup_lts.x | sudo bash -
+# Node
+
+RUN curl -sSL https://deb.nodesource.com/setup_lts.x | bash -
 
 RUN apt-get install -y nodejs 
 

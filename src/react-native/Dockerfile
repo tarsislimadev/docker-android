@@ -1,13 +1,13 @@
 FROM tmvdl/android:api-30
 
-RUN apt update -y && apt install -y sudo curl
+RUN apt update -y && apt install -y curl
 
-# node lts
+# Node
 
-RUN curl -sSL https://deb.nodesource.com/setup_lts.x | sudo bash -
+RUN curl -sSL https://deb.nodesource.com/setup_lts.x | bash -
 
 RUN apt update -y && apt install -y nodejs
 
-# react native
+# React native
 
 RUN npm install -g expo-cli@6 eas-cli@3 react-scripts

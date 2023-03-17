@@ -1,6 +1,6 @@
 FROM circleci/android:api-29-node as android
 
-# java 8
+# Java 8
 
 FROM openjdk:8
 
@@ -8,9 +8,9 @@ WORKDIR /opt
 
 # somethings
 
-RUN apt update -y && apt install -y sudo curl unzip
+RUN apt update -y && apt install -y curl unzip
 
-# gradle 7.3.3
+# Gradle 7.3.3
 
 RUN wget https://services.gradle.org/distributions/gradle-7.3.3-bin.zip
 
@@ -20,7 +20,7 @@ RUN unzip -d /opt/gradle gradle-7.3.3-bin.zip
 
 ENV PATH /opt/gradle/gradle-7.3.3/bin:$PATH
 
-# android 29
+# Android 29
 
 COPY --from=android /opt/android /opt/android
 
@@ -40,13 +40,13 @@ RUN unzip "${COMMANDLINETOOLS}" && rm -rf "${COMMANDLINETOOLS}"
 
 ENV PATH /opt/cmdline-tools/bin:$PATH
 
-# node lts
+# Node
 
-# RUN curl -sSL https://deb.nodesource.com/setup_lts.x | bash -
+RUN curl -sSL https://deb.nodesource.com/setup_lts.x | bash -
 
-# RUN apt update -y && apt install -y nodejs
+RUN apt update -y && apt install -y nodejs
 
-# ionic
+# Ionic
 
 # RUN npm install -g @ionic/cli native-run cordova-res ionic cordova
 
