@@ -10,4 +10,4 @@ RUN sudo apt update -y && sudo apt install -y nodejs
 
 # React native
 
-RUN npm install -g expo-cli@6 eas-cli@3 react-scripts
+RUN yarn install -g expo-cli@6 eas-cli@3 react-scripts
