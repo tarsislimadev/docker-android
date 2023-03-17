@@ -1,12 +1,12 @@
 FROM tmvdl/android:api-30
 
-RUN apt update -y && apt install -y curl
+RUN sudo apt update -y && sudo apt install -y curl
 
 # Node
 
 RUN curl -sSL https://deb.nodesource.com/setup_lts.x | bash -
 
-RUN apt update -y && apt install -y nodejs
+RUN sudo apt update -y && sudo apt install -y nodejs
 
 # React native
 
