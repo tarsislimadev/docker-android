@@ -8,7 +8,7 @@ WORKDIR /opt
 
 # somethings
 
-RUN apt update -y && apt install -y curl unzip
+RUN sudo apt update -y && sudo apt install -y curl unzip
 
 # Gradle 7.3.3
 
@@ -44,7 +44,7 @@ ENV PATH /opt/cmdline-tools/bin:$PATH
 
 RUN curl -sSL https://deb.nodesource.com/setup_lts.x | bash -
 
-RUN apt update -y && apt install -y nodejs
+RUN sudo apt update -y && sudo apt install -y nodejs
 
 # Ionic
 
