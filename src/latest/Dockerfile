@@ -48,6 +48,6 @@ RUN apt update -y && apt install -y nodejs
 
 # Ionic
 
-RUN yarn install -g @ionic/cli native-run cordova-res ionic cordova
+RUN npm install -g @ionic/cli native-run cordova-res ionic cordova
 
 ENTRYPOINT echo OK
