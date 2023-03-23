@@ -8,7 +8,7 @@ WORKDIR /opt
 
 # somethings
 
-RUN sudo apt update -y && sudo apt install -y curl unzip
+RUN apt update -y && apt install -y curl unzip
 
 # Gradle 7.3.3
 
