@@ -2,7 +2,7 @@ FROM circleci/android:api-30
 
 ENV ANDROID_SDK /opt/android/sdk
 
-RUN sudo apt update -y && sudo apt install -y curl
+RUN apt update -y && apt install -y curl
 
 ENV FILE commandlinetools-linux-9477386_latest.zip
 

@@ -1,3 +1,3 @@
 FROM circleci/android:api-29
 
-RUN sudo apt update -y && sudo apt install -y curl
+RUN apt update -y && apt install -y curl
