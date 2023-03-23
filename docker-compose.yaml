@@ -6,9 +6,9 @@ services:
     image: 'tmvdl/android:latest'
     build: './src/latest'
 
-  react-native:
-    image: 'tmvdl/android:react-native'
-    build: './src/react-native'
+  # react-native:
+  #   image: 'tmvdl/android:react-native'
+  #   build: './src/react-native'
 
   api-29:
     image: 'tmvdl/android:api-29'
