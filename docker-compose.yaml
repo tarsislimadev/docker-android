@@ -2,21 +2,21 @@ version: '3'
 
 services:
 
-  latest:
-    image: 'tmvdl/android:latest'
-    build: './src/latest'
+  # latest:
+  #   image: 'tmvdl/android:latest'
+  #   build: './src/latest'
 
   # react-native:
   #   image: 'tmvdl/android:react-native'
   #   build: './src/react-native'
 
-  api-29:
-    image: 'tmvdl/android:api-29'
-    build: './src/api-29'
+  # api-29:
+  #   image: 'tmvdl/android:api-29'
+  #   build: './src/api-29'
 
-  api-30:
-    image: 'tmvdl/android:api-30'
-    build: './src/api-30'
+  # api-30:
+  #   image: 'tmvdl/android:api-30'
+  #   build: './src/api-30'
 
   alpine:
     image: 'tmvdl/android:alpine'
