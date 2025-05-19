@@ -21,9 +21,11 @@ jobs:
           username: tmvdl
           password: ${{ secrets.GITHUBDOCKER }}
 
+      - name: Install Docker Compose
+        run: sudo apt update -y && sudo apt install docker-compose
+
       - name: Docker build
         run: docker-compose build
 
       - name: Docker push
         run: docker push tmvdl/android -a
-
