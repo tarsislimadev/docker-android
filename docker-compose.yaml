@@ -21,3 +21,7 @@ services:
   alpine:
     image: 'tmvdl/android:alpine'
     build: './src/alpine'
+
+  ionic:
+    image: 'tmvdl/android:ionic'
+    build: './src/ionic'
