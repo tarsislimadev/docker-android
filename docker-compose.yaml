@@ -18,6 +18,10 @@ services:
   #   image: 'tmvdl/android:api-30'
   #   build: './src/api-30'
 
+  cordova-api-30-node:
+    image: 'tmvdl/android:cordova-api-30-node'
+    build: './src/cordova-api-30-node'
+
   alpine:
     image: 'tmvdl/android:alpine'
     build: './src/alpine'
